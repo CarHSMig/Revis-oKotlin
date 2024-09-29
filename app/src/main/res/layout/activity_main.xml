@@ -1,0 +1,100 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="7dp"
+        android:text="Contador de Pontos"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/eles_score"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nos_score"
+        android:layout_width="90dp"
+        android:layout_height="129dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="80sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintEnd_toStartOf="@+id/eles_score"/>
+
+    <TextView
+        android:id="@+id/eles_score"
+        android:layout_width="90dp"
+        android:layout_height="129dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="80sp"
+        app:layout_constraintStart_toEndOf="@+id/nos_score"
+        app:layout_constraintTop_toBottomOf="@id/title"/>
+
+    <Button
+        android:id="@+id/nos_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintTop_toBottomOf="@+id/nos_score"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/nos_truco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Truco (+3)"
+        app:layout_constraintTop_toBottomOf="@+id/nos_plus"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/nos_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        app:layout_constraintTop_toBottomOf="@+id/nos_truco"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/eles_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+1"
+        app:layout_constraintTop_toBottomOf="@+id/eles_score"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/eles_truco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Truco (+3)"
+        app:layout_constraintTop_toBottomOf="@+id/eles_plus"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/eles_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-1"
+        app:layout_constraintTop_toBottomOf="@+id/eles_truco"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zerar"
+        app:layout_constraintTop_toBottomOf="@+id/nos_minus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
